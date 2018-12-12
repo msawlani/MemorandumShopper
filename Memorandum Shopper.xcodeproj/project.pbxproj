@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1A9E21B9749A0059E3E6 /* AppDelegate.swift */; };
-		F23F1AA121B9749A0059E3E6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA021B9749A0059E3E6 /* FirstViewController.swift */; };
-		F23F1AA321B9749A0059E3E6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA221B9749A0059E3E6 /* SecondViewController.swift */; };
+		F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA021B9749A0059E3E6 /* ListViewController.swift */; };
+		F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA221B9749A0059E3E6 /* AddViewController.swift */; };
 		F23F1AA621B9749A0059E3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA421B9749A0059E3E6 /* Main.storyboard */; };
 		F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA721B9749A0059E3E6 /* Assets.xcassets */; };
 		F23F1AAB21B9749A0059E3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */; };
@@ -18,8 +18,8 @@
 /* Begin PBXFileReference section */
 		F23F1A9B21B9749A0059E3E6 /* Memorandum Shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memorandum Shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23F1A9E21B9749A0059E3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F23F1AA021B9749A0059E3E6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F23F1AA221B9749A0059E3E6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F23F1AA021B9749A0059E3E6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F23F1AA221B9749A0059E3E6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F23F1AA521B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F23F1AA721B9749A0059E3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F23F1AAA21B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				F23F1A9E21B9749A0059E3E6 /* AppDelegate.swift */,
-				F23F1AA021B9749A0059E3E6 /* FirstViewController.swift */,
-				F23F1AA221B9749A0059E3E6 /* SecondViewController.swift */,
+				F23F1AA021B9749A0059E3E6 /* ListViewController.swift */,
+				F23F1AA221B9749A0059E3E6 /* AddViewController.swift */,
 				F23F1AA421B9749A0059E3E6 /* Main.storyboard */,
 				F23F1AA721B9749A0059E3E6 /* Assets.xcassets */,
 				F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */,
@@ -138,9 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23F1AA321B9749A0059E3E6 /* SecondViewController.swift in Sources */,
+				F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */,
 				F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */,
-				F23F1AA121B9749A0059E3E6 /* FirstViewController.swift in Sources */,
+				F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
