@@ -14,8 +14,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBAction func signupButton(_ sender: Any){
-        self.performSegue(withIdentifier: "SignUp", sender: self)
+    @IBAction func loginButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "MainMenu", sender: self)
+    }
+    
+    @IBAction func signupButton(_ sender: Any) {
+         self.performSegue(withIdentifier: "SignUp", sender: self)
     }
     
     override func viewDidLoad() {

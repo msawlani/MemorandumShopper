@@ -14,6 +14,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
         
     @IBOutlet weak var Item: UITextField!
     @IBOutlet weak var Asile: UITextField!
+    
     @IBAction func Add(_ sender: Any) {
         if  (Item.text != ""){
             grocerylist.append(Item.text!)
