@@ -13,6 +13,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
 
         
     @IBOutlet weak var Item: UITextField!
+    @IBOutlet weak var Asile: UITextField!
     @IBAction func Add(_ sender: Any) {
         if  (Item.text != ""){
             grocerylist.append(Item.text!)
@@ -25,6 +26,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
             
             Item.delegate = self
+            Asile.delegate = self
             
             
     }
@@ -37,6 +39,8 @@ class AddViewController: UIViewController,UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        Item.resignFirstResponder()
+        Asile.resignFirstResponder()
         return (true)
     }
 }

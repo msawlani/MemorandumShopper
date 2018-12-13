@@ -9,7 +9,7 @@
 import UIKit
 
 var grocerylist = [""]
-var asileNum = ["1"]
+var asileNum = [""]
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -24,7 +24,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = UITableViewCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = grocerylist[indexPath.row]
-        cell.textLabel?.text = asileNum[indexPath.row]
+        //cell.textLabel?.text = asileNum[indexPath.section]
         
         return (cell)
     }
