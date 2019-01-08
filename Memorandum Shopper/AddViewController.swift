@@ -19,6 +19,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
         if  (Item.text != ""){
             grocerylist.append(Item.text!)
             Item.text = ""
+
     }
     
     

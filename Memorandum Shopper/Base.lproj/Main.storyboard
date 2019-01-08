@@ -63,26 +63,31 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKe-JF-Zn9">
-                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <rect key="frame" x="16" y="20" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="Save:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3MQ-2n-c2q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu7-uK-AGq">
-                                <rect key="frame" x="325" y="20" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-7V-hc2">
+                                <rect key="frame" x="148" y="20" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Share"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu7-uK-AGq">
+                                <rect key="frame" x="281" y="20" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Load"/>
                                 <connections>
                                     <action selector="Load:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Pii-uY-KE4"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-7V-hc2">
-                                <rect key="frame" x="167" y="20" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,7 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6h-7N-wXM">
-                                <rect key="frame" x="138" y="289" width="98" height="32"/>
+                                <rect key="frame" x="138" y="331" width="98" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Item">
@@ -140,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-107"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-107.49625187406298"/>
         </scene>
         <!--Map-->
         <scene sceneID="pKG-KN-uRJ">
@@ -161,18 +166,33 @@
         <!--Settings-->
         <scene sceneID="9e4-gw-0YX">
             <objects>
-                <viewController id="6Oh-s2-00M" sceneMemberID="viewController">
+                <viewController id="6Oh-s2-00M" customClass="SettingsViewController" customModule="Memorandum_Shopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODl-Qa-CxS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-iP-L9u">
+                                <rect key="frame" x="116" y="142" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="Logout:" destination="6Oh-s2-00M" eventType="touchUpInside" id="iXE-Ho-dxB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pVz-78-Bn5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="oPn-x9-7c2"/>
+                    <connections>
+                        <segue destination="Cqo-ja-nu2" kind="showDetail" id="0JP-bq-3TJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jit-bx-d1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1259"/>
+            <point key="canvasLocation" x="749.60000000000002" y="1258.920539730135"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="iJJ-1D-YaT">
@@ -270,7 +290,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-7F-sOb">
                                 <rect key="frame" x="83" y="295" width="185" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
                                     <action selector="signupButton:" destination="y7I-q2-fci" eventType="touchUpInside" id="DFi-Nj-Wpi"/>
@@ -278,7 +300,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53Y-fT-dmo">
                                 <rect key="frame" x="83" y="339" width="185" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Already Signed Up?"/>
                                 <connections>
                                     <action selector="backButton:" destination="y7I-q2-fci" eventType="touchUpInside" id="umk-aJ-Zgj"/>
@@ -302,7 +326,6 @@
                             <constraint firstItem="uAf-7F-sOb" firstAttribute="leading" secondItem="TWn-dW-KCO" secondAttribute="leading" constant="83" id="Xrr-Jh-8yh"/>
                             <constraint firstItem="uAf-7F-sOb" firstAttribute="top" secondItem="8J3-hY-KKw" secondAttribute="bottom" constant="8" id="cpI-RL-zKq"/>
                             <constraint firstItem="hlX-DS-noq" firstAttribute="top" secondItem="F3K-Iu-Lkt" secondAttribute="bottom" constant="113" id="hbW-Cy-94F"/>
-                            <constraint firstItem="TWn-dW-KCO" firstAttribute="bottom" secondItem="53Y-fT-dmo" secondAttribute="bottom" constant="292" id="oba-WZ-AAr"/>
                             <constraint firstItem="53Y-fT-dmo" firstAttribute="leading" secondItem="TWn-dW-KCO" secondAttribute="leading" constant="83" id="qPF-U5-2Gf"/>
                             <constraint firstItem="hlX-DS-noq" firstAttribute="leading" secondItem="TWn-dW-KCO" secondAttribute="leading" constant="83" id="qcB-58-KlA"/>
                             <constraint firstItem="TWn-dW-KCO" firstAttribute="trailing" secondItem="F3K-Iu-Lkt" secondAttribute="trailing" constant="139" id="vrB-sc-o3W"/>
@@ -347,6 +370,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f8u-Ka-dpb"/>
+        <segue reference="hpV-BQ-txt"/>
+        <segue reference="8ps-5y-e4d"/>
     </inferredMetricsTieBreakers>
 </document>

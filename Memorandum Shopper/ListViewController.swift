@@ -9,19 +9,20 @@
 import UIKit
 import Firebase
 
-var grocerylist = [""]
-var asileNum = [""]
+var grocerylist = [String]()
+var asileNum = [String]()
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var List: UITableView!
     var refItem:DatabaseReference!
+    var databaseHandled: DatabaseHandle?
     @IBAction func Save(_ sender: Any) {
-        ItemList()
+        SaveItems()
     }
     
     @IBAction func Load(_ sender: Any) {
-        
+        LoadItems()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,29 +56,26 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         refItem = Database.database().reference().child("items")
         
-        refItem.observe(DataEventType.value, with: {(snapshot) in
-            if snapshot.childrenCount>0{
-                grocerylist.removeAll()
-                
-                for items in snapshot.children.allObjects as![DataSnapshot]{
-                    let itemObject = items.value as? [String: AnyObject]
-                    let itemName = itemObject?["Item Name"]
-                    let id = itemObject?["id"]
-                    
-                    
-                    
-                    grocerylist.append(itemName as! String)
-                }
-            }
-        })
+
     }
-    func ItemList(){
+    func SaveItems(){
     let key = refItem.childByAutoId().key
         let item = ["id":key!,
                     "Item Name": grocerylist] as [String : Any]
         
         refItem.child(key!).setValue(item)
         
+    }
+    
+    func LoadItems(){
+        databaseHandled = refItem?.child("items").observe(.childAdded, with: {(snapshot) in
+            let item = snapshot.value as? String
+            if let actualItem = item{
+                grocerylist.append(actualItem)
+                
+                self.List.reloadData()
+            }
+        })
     }
 
 }
