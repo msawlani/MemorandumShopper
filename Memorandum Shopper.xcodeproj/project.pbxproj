@@ -16,6 +16,7 @@
 		F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA721B9749A0059E3E6 /* Assets.xcassets */; };
 		F23F1AAB21B9749A0059E3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */; };
 		F26A387521E4F16E001C02F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */; };
+		F26A387721E50E6D001C02F6 /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26A387621E50E6D001C02F6 /* itemModel.swift */; };
 		F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7321C29FFB0060D66A /* LoginViewController.swift */; };
 		F2D40A7621C2AC130060D66A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7521C2AC130060D66A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		F23F1AAA21B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F23F1AAC21B9749A0059E3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F26A387621E50E6D001C02F6 /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
 		F2D40A7321C29FFB0060D66A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2D40A7521C2AC130060D66A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				F23F1AA721B9749A0059E3E6 /* Assets.xcassets */,
 				F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */,
 				F23F1AAC21B9749A0059E3E6 /* Info.plist */,
+				F26A387621E50E6D001C02F6 /* itemModel.swift */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */,
 				F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */,
 				F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */,
+				F26A387721E50E6D001C02F6 /* itemModel.swift in Sources */,
 				F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */,
 				F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */,
 			);
