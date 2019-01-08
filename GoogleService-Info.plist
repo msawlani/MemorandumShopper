@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>417623075763-444rtkdpquaec7q9cu9l772tt68d8323.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.417623075763-444rtkdpquaec7q9cu9l772tt68d8323</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDslyqa0N8Jd_Eplg2erKqqrSG8LAyh78c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>417623075763</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>michael.Memorandum-Shopper</string>
+	<key>PROJECT_ID</key>
+	<string>memorandum-shopper</string>
+	<key>STORAGE_BUCKET</key>
+	<string>memorandum-shopper.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:417623075763:ios:0f648c08227bf033</string>
+	<key>DATABASE_URL</key>
+	<string>https://memorandum-shopper.firebaseio.com</string>
+</dict>
+</plist>
