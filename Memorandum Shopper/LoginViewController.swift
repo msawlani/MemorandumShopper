@@ -12,8 +12,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var emailField: UITextField!
     
+    @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBAction func ShowPassword(_ sender: Any) {
+        if (HideShow.titleLabel?.text == "Show") {
+            passwordField.isSecureTextEntry = false
+            HideShow.setTitle("Hide", for: .normal)
+        }
+        else{
+            passwordField.isSecureTextEntry = true
+            HideShow.setTitle("Show", for: .normal)
+        }
+
+
+    }
     @IBAction func loginButton(_ sender: Any) {
         self.performSegue(withIdentifier: "MainMenu", sender: self)
     }

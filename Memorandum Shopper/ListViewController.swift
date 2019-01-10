@@ -68,7 +68,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func LoadItems(){
-        databaseHandled = refItem?.child("items").observe(.childAdded, with: {(snapshot) in
+        databaseHandled = refItem?.child("itemname").observe(.childAdded, with: {(snapshot) in
             let item = snapshot.value as? String
             if let actualItem = item{
                 grocerylist.append(actualItem)
