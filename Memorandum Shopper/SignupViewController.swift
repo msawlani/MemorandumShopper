@@ -11,13 +11,16 @@ import Firebase
 
 class SignupViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var PasswordFieldText: UITextField!
+    @IBOutlet weak var reenterpasswordFieldText: UITextField!
+    @IBOutlet weak var HideShow: UIButton!
+    @IBOutlet weak var HideShow2: UIButton!
     
-    @IBOutlet weak var reenterpasswordField: UITextField!
+
     @IBAction func signupButton(_ sender: Any) {
         guard let email = emailField.text else {return}
-        guard let password = passwordField.text else {return}
-        guard let reenterpassword = reenterpasswordField.text else {return}
+        guard let password = PasswordFieldText.text else {return}
+        guard let reenterpassword = reenterpasswordFieldText.text else {return}
         
         Auth.auth().createUser(withEmail: email, password: password){
             user, error in
@@ -32,10 +35,32 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         }
         
     }
-    
-    @IBAction func backButton(_ sender: Any) {
-        self .performSegue(withIdentifier: "Login", sender: self)
+    @IBAction func ShowPassword1(_ sender: Any) {
+        if (HideShow.titleLabel?.text == "Show") {
+            PasswordFieldText.isSecureTextEntry = false
+            HideShow.setTitle("Hide", for: .normal)
+        }
+        else{
+            PasswordFieldText.isSecureTextEntry = true
+            HideShow.setTitle("Show", for: .normal)
+        }
     }
+    
+    @IBAction func ShowPassword2(_ sender: Any) {
+        if (HideShow2.titleLabel?.text == "Show") {
+            reenterpasswordFieldText.isSecureTextEntry = false
+            HideShow2.setTitle("Hide", for: .normal)
+        }
+        else{
+            reenterpasswordFieldText.isSecureTextEntry = true
+            HideShow2.setTitle("Show", for: .normal)
+        }
+    }
+    
+    @IBAction func AlreadySignedUp(_ sender: Any) {
+        self.performSegue(withIdentifier: "Login", sender: self)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
