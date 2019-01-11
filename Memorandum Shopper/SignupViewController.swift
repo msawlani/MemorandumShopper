@@ -20,13 +20,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
     @IBAction func signupButton(_ sender: Any) {
         guard let email = emailField.text else {return}
         guard let password = PasswordFieldText.text else {return}
-        guard let reenterpassword = reenterpasswordFieldText.text else {return}
+
         
         Auth.auth().createUser(withEmail: email, password: password){
             user, error in
-            if error == nil && user != nil && password == reenterpassword{
-                print("Signup Successful")
+            if error == nil && user != nil && self.PasswordFieldText == self.reenterpasswordFieldText && self.PasswordFieldText != nil && self.reenterpasswordFieldText != nil{
                 self.performSegue(withIdentifier: "MainMenu", sender: self)
+                print("Signup Successful")
+       
             }else{
                 print("Error Signing up: \(error!.localizedDescription)")
                 

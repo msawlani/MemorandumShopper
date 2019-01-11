@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
     
@@ -14,7 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var passwordField: UITextField!
-    
+     
     @IBAction func ShowPassword(_ sender: Any) {
         if (HideShow.titleLabel?.text == "Show") {
             passwordField.isSecureTextEntry = false
@@ -27,8 +28,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
 
     }
+    @IBAction func ForgotPassword(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "ForgotPassword", sender: self)
+    }
+    
+    
     @IBAction func loginButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "MainMenu", sender: self)
+        guard let email = emailField.text else { return }
+        guard let pass = passwordField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: pass) { user, error in
+            if error == nil && user != nil && self.passwordField != nil{
+                self.performSegue(withIdentifier: "MainMenu", sender: self)
+                
+            } else {
+                
+            }
+    
+        }
     }
     
     @IBAction func signupButton(_ sender: Any) {
