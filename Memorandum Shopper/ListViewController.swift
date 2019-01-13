@@ -21,6 +21,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         SaveItems()
     }
     
+    @IBAction func ShareList(_ sender: Any) {
+        
+        for item in grocerylist{
+        let sharelist = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+        sharelist.popoverPresentationController?.sourceView = self.view
+        self.present(sharelist, animated: true, completion: nil)
+        }
+            
+    }
     @IBAction func Load(_ sender: Any) {
         LoadItems()
     }
