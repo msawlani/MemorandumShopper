@@ -68,11 +68,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     func SaveItems(){
-    let key = refItem.childByAutoId().key
-        let item = ["id":key!,
-                    "Item Name": grocerylist] as [String : Any]
+       
+    let userID = Auth.auth().currentUser!.uid
+
+        let item = ["id":userID,
+                    "Item Name": grocerylist,
+            ] as [String : Any]
         
-        refItem.child(key!).setValue(item)
+        refItem.child(userID).setValue(item)
         
     }
     

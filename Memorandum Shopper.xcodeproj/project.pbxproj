@@ -16,10 +16,60 @@
 		F23F1AA621B9749A0059E3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA421B9749A0059E3E6 /* Main.storyboard */; };
 		F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA721B9749A0059E3E6 /* Assets.xcassets */; };
 		F23F1AAB21B9749A0059E3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */; };
+		F25409E621EC586000B077AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25409E421EC586000B077AD /* Interface.storyboard */; };
+		F25409E821EC586100B077AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25409E721EC586100B077AD /* Assets.xcassets */; };
+		F25409EF21EC586200B077AD /* Mem Mini Shopper Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F25409EE21EC586200B077AD /* Mem Mini Shopper Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F25409F421EC586200B077AD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25409F321EC586200B077AD /* InterfaceController.swift */; };
+		F25409F621EC586200B077AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25409F521EC586200B077AD /* ExtensionDelegate.swift */; };
+		F25409F821EC586200B077AD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25409F721EC586200B077AD /* NotificationController.swift */; };
+		F25409FA21EC586200B077AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25409F921EC586200B077AD /* Assets.xcassets */; };
+		F25409FF21EC586200B077AD /* Mem Mini Shopper.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F25409E221EC586000B077AD /* Mem Mini Shopper.app */; };
 		F26A387521E4F16E001C02F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */; };
 		F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7321C29FFB0060D66A /* LoginViewController.swift */; };
 		F2D40A7621C2AC130060D66A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7521C2AC130060D66A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F25409F021EC586200B077AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F23F1A9321B9749A0059E3E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F25409ED21EC586200B077AD;
+			remoteInfo = "Mem Mini Shopper Extension";
+		};
+		F25409FD21EC586200B077AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F23F1A9321B9749A0059E3E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F25409E121EC586000B077AD;
+			remoteInfo = "Mem Mini Shopper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2540A0521EC586200B077AD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F25409EF21EC586200B077AD /* Mem Mini Shopper Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2540A0721EC586200B077AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F25409FF21EC586200B077AD /* Mem Mini Shopper.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BFB394B5D13A9DEB1D80510 /* Pods-Memorandum Shopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorandum Shopper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +85,17 @@
 		F23F1AA721B9749A0059E3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F23F1AAA21B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F23F1AAC21B9749A0059E3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F25409E221EC586000B077AD /* Mem Mini Shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mem Mini Shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25409E521EC586000B077AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F25409E721EC586100B077AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F25409E921EC586100B077AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F25409EE21EC586200B077AD /* Mem Mini Shopper Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mem Mini Shopper Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25409F321EC586200B077AD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F25409F521EC586200B077AD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F25409F721EC586200B077AD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F25409F921EC586200B077AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F25409FB21EC586200B077AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F25409FC21EC586200B077AD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F2D40A7321C29FFB0060D66A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2D40A7521C2AC130060D66A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +107,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95C4E644FD96B1B80273828 /* Pods_Memorandum_Shopper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25409EB21EC586200B077AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				F23F1A9D21B9749A0059E3E6 /* Memorandum Shopper */,
+				F25409E321EC586000B077AD /* Mem Mini Shopper */,
+				F25409F221EC586200B077AD /* Mem Mini Shopper Extension */,
 				F23F1A9C21B9749A0059E3E6 /* Products */,
 				DA229EB3BD7845D7CCD2A6AB /* Pods */,
 				C1B13C9E46EA4B910DBE8125 /* Frameworks */,
@@ -83,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				F23F1A9B21B9749A0059E3E6 /* Memorandum Shopper.app */,
+				F25409E221EC586000B077AD /* Mem Mini Shopper.app */,
+				F25409EE21EC586200B077AD /* Mem Mini Shopper Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +178,29 @@
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
 		};
+		F25409E321EC586000B077AD /* Mem Mini Shopper */ = {
+			isa = PBXGroup;
+			children = (
+				F25409E421EC586000B077AD /* Interface.storyboard */,
+				F25409E721EC586100B077AD /* Assets.xcassets */,
+				F25409E921EC586100B077AD /* Info.plist */,
+			);
+			path = "Mem Mini Shopper";
+			sourceTree = "<group>";
+		};
+		F25409F221EC586200B077AD /* Mem Mini Shopper Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F25409F321EC586200B077AD /* InterfaceController.swift */,
+				F25409F521EC586200B077AD /* ExtensionDelegate.swift */,
+				F25409F721EC586200B077AD /* NotificationController.swift */,
+				F25409F921EC586200B077AD /* Assets.xcassets */,
+				F25409FB21EC586200B077AD /* Info.plist */,
+				F25409FC21EC586200B077AD /* PushNotificationPayload.apns */,
+			);
+			path = "Mem Mini Shopper Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,15 +213,51 @@
 				F23F1A9821B9749A0059E3E6 /* Frameworks */,
 				F23F1A9921B9749A0059E3E6 /* Resources */,
 				277868853D669A3C7820BAE4 /* [CP] Embed Pods Frameworks */,
+				F2540A0721EC586200B077AD /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F25409FE21EC586200B077AD /* PBXTargetDependency */,
 			);
 			name = "Memorandum Shopper";
 			productName = "Memorandum Shopper";
 			productReference = F23F1A9B21B9749A0059E3E6 /* Memorandum Shopper.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F25409E121EC586000B077AD /* Mem Mini Shopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2540A0621EC586200B077AD /* Build configuration list for PBXNativeTarget "Mem Mini Shopper" */;
+			buildPhases = (
+				F25409E021EC586000B077AD /* Resources */,
+				F2540A0521EC586200B077AD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F25409F121EC586200B077AD /* PBXTargetDependency */,
+			);
+			name = "Mem Mini Shopper";
+			productName = "Mem Mini Shopper";
+			productReference = F25409E221EC586000B077AD /* Mem Mini Shopper.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F25409ED21EC586200B077AD /* Mem Mini Shopper Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2540A0421EC586200B077AD /* Build configuration list for PBXNativeTarget "Mem Mini Shopper Extension" */;
+			buildPhases = (
+				F25409EA21EC586200B077AD /* Sources */,
+				F25409EB21EC586200B077AD /* Frameworks */,
+				F25409EC21EC586200B077AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mem Mini Shopper Extension";
+			productName = "Mem Mini Shopper Extension";
+			productReference = F25409EE21EC586200B077AD /* Mem Mini Shopper Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -139,6 +270,12 @@
 				ORGANIZATIONNAME = "Michael Sawlani";
 				TargetAttributes = {
 					F23F1A9A21B9749A0059E3E6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F25409E121EC586000B077AD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F25409ED21EC586200B077AD = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -157,6 +294,8 @@
 			projectRoot = "";
 			targets = (
 				F23F1A9A21B9749A0059E3E6 /* Memorandum Shopper */,
+				F25409E121EC586000B077AD /* Mem Mini Shopper */,
+				F25409ED21EC586200B077AD /* Mem Mini Shopper Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +309,23 @@
 				F26A387521E4F16E001C02F6 /* GoogleService-Info.plist in Resources */,
 				F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */,
 				F23F1AA621B9749A0059E3E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25409E021EC586000B077AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25409E821EC586100B077AD /* Assets.xcassets in Resources */,
+				F25409E621EC586000B077AD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25409EC21EC586200B077AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25409FA21EC586200B077AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +399,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F25409EA21EC586200B077AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25409F821EC586200B077AD /* NotificationController.swift in Sources */,
+				F25409F621EC586200B077AD /* ExtensionDelegate.swift in Sources */,
+				F25409F421EC586200B077AD /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F25409F121EC586200B077AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F25409ED21EC586200B077AD /* Mem Mini Shopper Extension */;
+			targetProxy = F25409F021EC586200B077AD /* PBXContainerItemProxy */;
+		};
+		F25409FE21EC586200B077AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F25409E121EC586000B077AD /* Mem Mini Shopper */;
+			targetProxy = F25409FD21EC586200B077AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F23F1AA421B9749A0059E3E6 /* Main.storyboard */ = {
@@ -260,6 +439,14 @@
 				F23F1AAA21B9749A0059E3E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F25409E421EC586000B077AD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F25409E521EC586000B077AD /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -419,6 +606,88 @@
 			};
 			name = Release;
 		};
+		F2540A0021EC586200B077AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7NNMD9CR7;
+				IBSC_MODULE = Mem_Mini_Shopper_Extension;
+				INFOPLIST_FILE = "Mem Mini Shopper/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		F2540A0121EC586200B077AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7NNMD9CR7;
+				IBSC_MODULE = Mem_Mini_Shopper_Extension;
+				INFOPLIST_FILE = "Mem Mini Shopper/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		F2540A0221EC586200B077AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7NNMD9CR7;
+				INFOPLIST_FILE = "Mem Mini Shopper Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		F2540A0321EC586200B077AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7NNMD9CR7;
+				INFOPLIST_FILE = "Mem Mini Shopper Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,6 +705,24 @@
 			buildConfigurations = (
 				F23F1AB021B9749A0059E3E6 /* Debug */,
 				F23F1AB121B9749A0059E3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2540A0421EC586200B077AD /* Build configuration list for PBXNativeTarget "Mem Mini Shopper Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2540A0221EC586200B077AD /* Debug */,
+				F2540A0321EC586200B077AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2540A0621EC586200B077AD /* Build configuration list for PBXNativeTarget "Mem Mini Shopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2540A0021EC586200B077AD /* Debug */,
+				F2540A0121EC586200B077AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
