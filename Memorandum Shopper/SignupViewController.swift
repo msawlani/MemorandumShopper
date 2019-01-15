@@ -29,13 +29,27 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
                 print("Signup Successful")
        
             }else{
-                print("Error Signing up: \(error!.localizedDescription)")
+                let alert = UIAlertController(title: "Failed to Signup", message: "Must enter email and Passwords must match", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
                 
             }
             
         }
         
     }
+    
+    @IBAction func Hint(_ sender: Any) {
+        let alert = UIAlertController(title: "Password Length", message: "Password must be 8 - 16 characters", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    
     @IBAction func ShowPassword1(_ sender: Any) {
         if (HideShow.titleLabel?.text == "Show") {
             PasswordFieldText.isSecureTextEntry = false

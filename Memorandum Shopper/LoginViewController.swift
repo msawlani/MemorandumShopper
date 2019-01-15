@@ -33,7 +33,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         self.performSegue(withIdentifier: "ForgotPassword", sender: self)
     }
     
-    
     @IBAction func loginButton(_ sender: Any) {
         guard let email = emailField.text else { return }
         guard let pass = passwordField.text else { return }
