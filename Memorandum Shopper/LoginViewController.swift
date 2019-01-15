@@ -42,7 +42,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 self.performSegue(withIdentifier: "MainMenu", sender: self)
                 
             } else {
+                let alert = UIAlertController(title: "Failed to Login", message: "Must enter email and password", preferredStyle: .alert)
                 
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
             }
     
         }
