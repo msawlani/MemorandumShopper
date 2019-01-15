@@ -23,11 +23,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func ShareList(_ sender: Any) {
         
-        for item in grocerylist{
-        let sharelist = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+
+        let sharelist = UIActivityViewController(activityItems: grocerylist, applicationActivities: nil)
         sharelist.popoverPresentationController?.sourceView = self.view
         self.present(sharelist, animated: true, completion: nil)
-        }
+        
             
     }
     @IBAction func Load(_ sender: Any) {
@@ -80,13 +80,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func LoadItems(){
-        databaseHandled = refItem?.child("itemname").observe(.childAdded, with: {(snapshot) in
-            let item = snapshot.value as? String
-            if let actualItem = item{
-                grocerylist.append(actualItem)
-                
-                self.List.reloadData()
-            }
+        refItem.child("items").queryOrderedByKey().observe(.childAdded, with: {snapshot in
+            let value = snapshot.value as? NSDictionary
+            let itemname = value!["Item Name"] as! String
+            grocerylist.insert(itemname, at: 0)
+            self.List.reloadData()
         })
     }
 
