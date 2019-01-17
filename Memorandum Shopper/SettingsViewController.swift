@@ -7,12 +7,18 @@
 //
 
 import UIKit
-
+import Firebase
 class SettingsViewController: UIViewController,UITextFieldDelegate {
         
         
     @IBAction func Logout(_ sender: Any) {
-        self.performSegue(withIdentifier: "MainMenu", sender: self)
+        do{
+            try Auth.auth().signOut()
+        }catch let logouterror{
+            print(logouterror)
+        }
+        self.performSegue(withIdentifier: "Login", sender: self)
+
     }
     override func viewDidLoad() {
             super.viewDidLoad()

@@ -34,13 +34,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func loginButton(_ sender: Any) {
+
         guard let email = emailField.text else { return }
         guard let pass = passwordField.text else { return }
         
         Auth.auth().signIn(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil && self.passwordField != nil{
                 self.performSegue(withIdentifier: "MainMenu", sender: self)
-                
+
             } else {
                 let alert = UIAlertController(title: "Failed to Login", message: "Must enter email and password", preferredStyle: .alert)
                 

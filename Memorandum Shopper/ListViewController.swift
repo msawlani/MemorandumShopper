@@ -63,28 +63,27 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        refItem = Database.database().reference().child("items")
+        refItem = Database.database().reference()
         
 
     }
     func SaveItems(){
-       
     let userID = Auth.auth().currentUser!.uid
 
-        let item = ["id":userID,
-                    "Item Name": grocerylist,
-            ] as [String : Any]
+        let item = grocerylist
         
         refItem.child(userID).setValue(item)
         
     }
     
     func LoadItems(){
-        refItem.child("items").queryOrderedByKey().observe(.childAdded, with: {snapshot in
-            let value = snapshot.value as? NSDictionary
-            let itemname = value!["Item Name"] as! String
-            grocerylist.insert(itemname, at: 0)
-            self.List.reloadData()
+    let userID = Auth.auth().currentUser!.uid
+        databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
+            let item = snapshot.value as? String
+            if let actualItem = item{
+                grocerylist.append(actualItem)
+                self.List.reloadData()
+            }
         })
     }
 

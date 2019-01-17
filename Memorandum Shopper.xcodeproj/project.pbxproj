@@ -25,6 +25,7 @@
 		F25409FA21EC586200B077AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25409F921EC586200B077AD /* Assets.xcassets */; };
 		F25409FF21EC586200B077AD /* Mem Mini Shopper.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F25409E221EC586000B077AD /* Mem Mini Shopper.app */; };
 		F26A387521E4F16E001C02F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */; };
+		F2AC3E1821EE529C00798CAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC3E1721EE529C00798CAF /* MapViewController.swift */; };
 		F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7321C29FFB0060D66A /* LoginViewController.swift */; };
 		F2D40A7621C2AC130060D66A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7521C2AC130060D66A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		F25409FB21EC586200B077AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F25409FC21EC586200B077AD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F2AC3E1721EE529C00798CAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F2D40A7321C29FFB0060D66A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2D40A7521C2AC130060D66A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 				F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */,
 				F23F1AAC21B9749A0059E3E6 /* Info.plist */,
 				F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */,
+				F2AC3E1721EE529C00798CAF /* MapViewController.swift */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */,
 				F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */,
 				F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */,
+				F2AC3E1821EE529C00798CAF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
