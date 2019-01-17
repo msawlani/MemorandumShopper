@@ -68,6 +68,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     func SaveItems(){
+    
+        
     let userID = Auth.auth().currentUser!.uid
 
         let item = grocerylist
