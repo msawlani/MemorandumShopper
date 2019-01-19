@@ -79,6 +79,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func LoadItems(){
+        
     let userID = Auth.auth().currentUser!.uid
         databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
             let item = snapshot.value as? String
