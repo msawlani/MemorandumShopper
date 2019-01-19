@@ -104,6 +104,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F5057505943AB1FAA2E4D2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F23F1A9821B9749A0059E3E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +224,7 @@
 				F23F1A9921B9749A0059E3E6 /* Resources */,
 				277868853D669A3C7820BAE4 /* [CP] Embed Pods Frameworks */,
 				F2540A0721EC586200B077AD /* Embed Watch Content */,
+				8F4D7F2119AD300CA853E9A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +242,7 @@
 			buildPhases = (
 				F25409E021EC586000B077AD /* Resources */,
 				F2540A0521EC586200B077AD /* Embed App Extensions */,
+				9F5057505943AB1FAA2E4D2B /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +354,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -354,6 +364,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -361,6 +372,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4D7F2119AD300CA853E9A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4FD8BEDFC89D39AEC66D07D /* [CP] Check Pods Manifest.lock */ = {

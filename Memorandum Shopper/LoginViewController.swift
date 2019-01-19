@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate, GIDSignInDelegate{
     
     @IBOutlet weak var emailField: UITextField!
     
@@ -56,11 +57,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBAction func signupButton(_ sender: Any) {
          self.performSegue(withIdentifier: "SignUp", sender: self)
     }
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        if let error = error {
+            print("Failed to login", error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                print("Failed to login", error)
+                return
+            }
+            self.performSegue(withIdentifier: "MainMenu", sender: self)
+
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let GoogleSignin = GIDSignInButton()
+        GoogleSignin.frame = CGRect(x: 16, y: 116 + 66, width: view.frame.width - 32, height: 50)
+        view.addSubview(GoogleSignin)
         
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
+        GIDSignIn.sharedInstance()?.uiDelegate = self
     }
     
     
