@@ -84,7 +84,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let GoogleSignin = GIDSignInButton()
-        GoogleSignin.frame = CGRect(x: 16, y: 116 + 66, width: view.frame.width - 32, height: 50)
+        GoogleSignin.frame = CGRect(x: 90, y: 375, width: 230, height: 50)
+        
         view.addSubview(GoogleSignin)
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
