@@ -84,8 +84,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
             let item = snapshot.value as? String
             if let actualItem = item{
+                if  grocerylist.count == 0{
                 grocerylist.append(actualItem)
                 self.List.reloadData()
+                }
+                
             }
         })
     }

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
+
 class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate, GIDSignInDelegate{
     
     @IBOutlet weak var emailField: UITextField!
@@ -92,9 +93,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         GIDSignIn.sharedInstance()?.uiDelegate = self
     }
     
-    
 }
-
 
 func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     //self.view.endEditing(true)
