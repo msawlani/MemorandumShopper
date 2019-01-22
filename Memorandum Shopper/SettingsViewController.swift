@@ -8,9 +8,14 @@
 
 import UIKit
 import Firebase
+import UserNotifications
+
 class SettingsViewController: UIViewController,UITextFieldDelegate {
+    
         
-        
+    @IBAction func AllowNotifications(_ sender: Any) {
+
+    }
     @IBAction func Logout(_ sender: Any) {
         do{
             try Auth.auth().signOut()
