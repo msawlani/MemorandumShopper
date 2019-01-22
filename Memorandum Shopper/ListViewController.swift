@@ -68,14 +68,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     func SaveItems(){
-    
+
         
     let userID = Auth.auth().currentUser!.uid
 
         let item = grocerylist
         
         refItem.child(userID).setValue(item)
-        
+
     }
     
     func LoadItems(){
@@ -83,12 +83,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let userID = Auth.auth().currentUser!.uid
         databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
             let item = snapshot.value as? String
-            if let actualItem = item{
-                if  grocerylist.count == 0{
-                grocerylist.append(actualItem)
-                self.List.reloadData()
-                }
+            let actualItem = item
+            if actualItem != nil && !grocerylist.contains(item!){
                 
+                grocerylist.append(actualItem!)
+                self.List.reloadData()
+                
+                
+
             }
         })
     }
