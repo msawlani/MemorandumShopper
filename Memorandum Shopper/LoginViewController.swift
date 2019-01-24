@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
     }
     @IBAction func GoogleLogin(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
+        
     }
     @IBAction func ForgotPassword(_ sender: Any) {
         

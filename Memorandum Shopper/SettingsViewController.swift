@@ -17,6 +17,14 @@ class SettingsViewController: UIViewController,UITextFieldDelegate {
     @IBAction func AllowNotifications(_ sender: Any) {
 
     }
+    
+    @IBAction func ChangePassword(_ sender: Any) {
+        self.performSegue(withIdentifier: "Password", sender: self)
+    }
+    
+    @IBAction func ChangeEmail(_ sender: Any) {
+        self.performSegue(withIdentifier: "Email", sender: self)
+    }
     @IBAction func Logout(_ sender: Any) {
         do{
             try

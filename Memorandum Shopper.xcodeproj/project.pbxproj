@@ -16,6 +16,8 @@
 		F23F1AA621B9749A0059E3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA421B9749A0059E3E6 /* Main.storyboard */; };
 		F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA721B9749A0059E3E6 /* Assets.xcassets */; };
 		F23F1AAB21B9749A0059E3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */; };
+		F240F44B21FA1F3D0054BCDE /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */; };
+		F240F44D21FA1F530054BCDE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */; };
 		F250D83F21F3CF3F00618A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F250D83E21F3CF3F00618A67 /* CoreLocation.framework */; };
 		F25409E621EC586000B077AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25409E421EC586000B077AD /* Interface.storyboard */; };
 		F25409E821EC586100B077AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25409E721EC586100B077AD /* Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		F23F1AA721B9749A0059E3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F23F1AAA21B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F23F1AAC21B9749A0059E3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F250D83E21F3CF3F00618A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F25409E221EC586000B077AD /* Mem Mini Shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mem Mini Shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25409E521EC586000B077AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				F23F1AAC21B9749A0059E3E6 /* Info.plist */,
 				F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */,
 				F28CB80A21FA105500712516 /* ForgotPasswordViewController.swift */,
+				F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */,
+				F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -431,6 +437,8 @@
 			files = (
 				F28CB80B21FA105500712516 /* ForgotPasswordViewController.swift in Sources */,
 				F2D40A7621C2AC130060D66A /* SignupViewController.swift in Sources */,
+				F240F44B21FA1F3D0054BCDE /* ChangeEmailViewController.swift in Sources */,
+				F240F44D21FA1F530054BCDE /* ChangePasswordViewController.swift in Sources */,
 				F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */,
 				F21A44EF21E520BE00202BD6 /* SettingsViewController.swift in Sources */,
 				F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */,
