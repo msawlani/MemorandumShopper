@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import UserNotifications
+import GoogleSignIn
 
 class SettingsViewController: UIViewController,UITextFieldDelegate {
     
@@ -18,7 +19,9 @@ class SettingsViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func Logout(_ sender: Any) {
         do{
-            try Auth.auth().signOut()
+            try
+                Auth.auth().signOut()
+                GIDSignIn.sharedInstance()?.signOut()
         }catch let logouterror{
             print(logouterror)
         }
