@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AddViewController: UIViewController,UITextFieldDelegate {
 
@@ -19,11 +20,21 @@ class AddViewController: UIViewController,UITextFieldDelegate {
             grocerylist.append(Item.text!)
             Item.text = ""
             view.endEditing(true)
-
+            let content = UNMutableNotificationContent()
+            content.title = "Item Added"
+            content.body = Item.text!
+            content.badge = 1
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "Timer Done", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
+        
+        
     }
     
     
-        func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
             
@@ -33,7 +44,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
     }
 
 
-}
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     

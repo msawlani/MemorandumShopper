@@ -14,6 +14,7 @@ import GoogleSignIn
 class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate, GIDSignInDelegate{
     
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var GoogleSignin: GIDSignInButton!
     
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var passwordField: UITextField!
@@ -29,6 +30,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         }
 
 
+    }
+    @IBAction func GoogleLogin(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
     }
     @IBAction func ForgotPassword(_ sender: Any) {
         
@@ -83,11 +87,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let GoogleSignin = GIDSignInButton()
-        GoogleSignin.frame = CGRect(x: 90, y: 375, width: 230, height: 50)
-        
-        view.addSubview(GoogleSignin)
-        
+
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
