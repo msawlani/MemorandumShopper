@@ -19,11 +19,16 @@ class SettingsViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func ChangePassword(_ sender: Any) {
-        self.performSegue(withIdentifier: "Password", sender: self)
+        if GIDSignIn.sharedInstance()?.currentUser == nil{
+            self.performSegue(withIdentifier: "Password", sender: self)
+        }
+   
     }
     
     @IBAction func ChangeEmail(_ sender: Any) {
+        if GIDSignIn.sharedInstance()?.currentUser == nil{
         self.performSegue(withIdentifier: "Email", sender: self)
+        }
     }
     @IBAction func Logout(_ sender: Any) {
         do{

@@ -12,6 +12,9 @@ import FirebaseAuth
 
 class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
     
+    @IBAction func Back(_ sender: Any) {
+        self.performSegue(withIdentifier: "Login", sender: self)
+    }
     @IBOutlet weak var Email: UITextField!
     @IBAction func ResetPasswordLink(_ sender: Any) {
         guard let email = Email.text else { return }

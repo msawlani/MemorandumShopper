@@ -14,6 +14,9 @@ class ChangeEmailVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var Email: UITextField!
     
+    @IBAction func Back(_ sender: Any) {
+        self.performSegue(withIdentifier: "Login", sender: self)
+    }
     @IBAction func ChangeEmail(_ sender: Any) {
         guard let email = Email.text else{return}
         Auth.auth().currentUser?.updateEmail(to: email){ error in
@@ -31,10 +34,11 @@ class ChangeEmailVC: UIViewController, UITextFieldDelegate {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in
                     do{
                     try Auth.auth().signOut()
+                        self.performSegue(withIdentifier: "Login", sender: self)
                     }catch let Logouterror{
                         print(Logouterror)
                     }
-                    self.performSegue(withIdentifier: "Login", sender: self)
+                    
 
                 }))
                 

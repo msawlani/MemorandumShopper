@@ -15,6 +15,42 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var reenterPassword: UITextField!
     
+    @IBOutlet weak var HideShow: UIButton!
+    
+    @IBOutlet weak var HideShow2: UIButton!
+    
+    @IBAction func Back(_ sender: Any) {
+        self.performSegue(withIdentifier: "Login", sender: self)
+    }
+    @IBAction func Hint(_ sender: Any) {
+        let alert = UIAlertController(title: "Password Length", message: "Password must be 8 - 16 characters", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    @IBAction func ShowPassword(_ sender: Any) {
+        if (HideShow.titleLabel?.text == "Show") {
+            Password.isSecureTextEntry = false
+            HideShow.setTitle("Hide", for: .normal)
+        }
+        else{
+            Password.isSecureTextEntry = true
+            HideShow.setTitle("Show", for: .normal)
+        }
+    }
+    
+    @IBAction func ShowPassword2(_ sender: Any) {
+        if (HideShow2.titleLabel?.text == "Show") {
+            reenterPassword.isSecureTextEntry = false
+            HideShow2.setTitle("Hide", for: .normal)
+        }
+        else{
+            reenterPassword.isSecureTextEntry = true
+            HideShow2.setTitle("Show", for: .normal)
+        }
+    }
+    
     @IBAction func ChangPassword(_ sender: Any) {
         guard let password = Password.text else{return}
         guard let reEnterPassword = reenterPassword.text else{return}

@@ -63,6 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
     @IBAction func signupButton(_ sender: Any) {
          self.performSegue(withIdentifier: "SignUp", sender: self)
     }
+    //Google Login Function
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let error = error {
