@@ -13,11 +13,6 @@ import GoogleSignIn
 
 class SettingsViewController: UIViewController,UITextFieldDelegate {
     
-        
-    @IBAction func AllowNotifications(_ sender: Any) {
-
-    }
-    
     @IBAction func ChangePassword(_ sender: Any) {
         if GIDSignIn.sharedInstance()?.currentUser == nil{
             self.performSegue(withIdentifier: "Password", sender: self)

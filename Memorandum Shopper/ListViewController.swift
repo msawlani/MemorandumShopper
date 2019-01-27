@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import UserNotifications
 
-var grocerylist = [String]()
+var grocerylist = [String()]
 
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -35,7 +35,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func ShareList(_ sender: Any) {
         
 
-        let sharelist = UIActivityViewController(activityItems: [grocerylist], applicationActivities: nil)
+        let sharelist = UIActivityViewController(activityItems: grocerylist, applicationActivities: nil)
         sharelist.popoverPresentationController?.sourceView = self.view
         self.present(sharelist, animated: true, completion: nil)
         
