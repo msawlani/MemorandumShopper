@@ -94,16 +94,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         GIDSignIn.sharedInstance().delegate = self
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
+        
+        emailField.delegate = self
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        return (true)
+    }
 }
 
-func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //self.view.endEditing(true)
-    
-}
 
-func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    return (true)
-}
 

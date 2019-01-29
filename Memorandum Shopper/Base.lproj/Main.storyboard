@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-iP-L9u">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-iP-L9u">
                                 <rect key="frame" x="115" y="284" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -228,7 +228,7 @@
                                     <action selector="Logout:" destination="6Oh-s2-00M" eventType="touchUpInside" id="iXE-Ho-dxB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwm-34-u93">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwm-34-u93">
                                 <rect key="frame" x="115" y="328" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -238,7 +238,7 @@
                                     <action selector="ChangeEmail:" destination="6Oh-s2-00M" eventType="touchUpInside" id="pX4-Uo-0YA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-y6-WCC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-y6-WCC">
                                 <rect key="frame" x="115" y="372" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -260,6 +260,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pVz-78-Bn5" firstAttribute="bottom" secondItem="0ti-y6-WCC" secondAttribute="bottom" constant="279" id="0HM-y6-7Sd"/>
                             <constraint firstItem="Dh7-iP-L9u" firstAttribute="trailing" secondItem="0ti-y6-WCC" secondAttribute="trailing" id="Ays-MK-gDp"/>
                             <constraint firstItem="0ti-y6-WCC" firstAttribute="top" secondItem="Dh7-iP-L9u" secondAttribute="bottom" constant="52" id="Kpe-3T-jUc"/>
                             <constraint firstItem="Dh7-iP-L9u" firstAttribute="leading" secondItem="0ti-y6-WCC" secondAttribute="leading" id="Oa4-YZ-GmZ"/>
@@ -796,6 +797,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hpV-BQ-txt"/>
-        <segue reference="0JP-bq-3TJ"/>
+        <segue reference="CNB-E4-i4T"/>
     </inferredMetricsTieBreakers>
 </document>

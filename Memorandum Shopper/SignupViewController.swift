@@ -85,12 +85,15 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //self.view.endEditing(true)
+        view.endEditing(true)
+        
+    }
     
-}
-
-func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    return (true)
-}
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailField.resignFirstResponder()
+        PasswordFieldText.resignFirstResponder()
+        reenterpasswordFieldText.resignFirstResponder()
+        return (true)
+    }
 
 }
