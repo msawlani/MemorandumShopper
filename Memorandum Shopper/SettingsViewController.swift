@@ -13,18 +13,21 @@ import GoogleSignIn
 
 class SettingsViewController: UIViewController,UITextFieldDelegate {
     
+    //Sends you to change password for firebase
     @IBAction func ChangePassword(_ sender: Any) {
         if GIDSignIn.sharedInstance()?.currentUser == nil{
             self.performSegue(withIdentifier: "Password", sender: self)
         }
    
     }
-    
+        //Sends you to change email for firebase
     @IBAction func ChangeEmail(_ sender: Any) {
         if GIDSignIn.sharedInstance()?.currentUser == nil{
         self.performSegue(withIdentifier: "Email", sender: self)
         }
     }
+    
+    //logs google user and firebase user out
     @IBAction func Logout(_ sender: Any) {
         do{
             try

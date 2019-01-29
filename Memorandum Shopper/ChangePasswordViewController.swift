@@ -19,9 +19,12 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var HideShow2: UIButton!
     
+    //sends you back to settings
     @IBAction func Back(_ sender: Any) {
-        self.performSegue(withIdentifier: "Login", sender: self)
+        self.performSegue(withIdentifier: "Settings", sender: self)
     }
+    
+    //shows you how long password has to be
     @IBAction func Hint(_ sender: Any) {
         let alert = UIAlertController(title: "Password Length", message: "Password must be 8 - 16 characters", preferredStyle: .alert)
         
@@ -29,6 +32,7 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
         
         self.present(alert, animated: true)
     }
+    //shows you the password
     @IBAction func ShowPassword(_ sender: Any) {
         if (HideShow.titleLabel?.text == "Show") {
             Password.isSecureTextEntry = false
@@ -40,6 +44,7 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //shows you the password
     @IBAction func ShowPassword2(_ sender: Any) {
         if (HideShow2.titleLabel?.text == "Show") {
             reenterPassword.isSecureTextEntry = false
@@ -51,7 +56,8 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func ChangPassword(_ sender: Any) {
+    //changes the password your password to what you entered and logs you out
+    @IBAction func ChangePassword(_ sender: Any) {
         guard let password = Password.text else{return}
         guard let reEnterPassword = reenterPassword.text else{return}
         Auth.auth().currentUser?.updatePassword(to: password){ error in
@@ -97,6 +103,7 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    //hides keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         Password.resignFirstResponder()
         reenterPassword.resignFirstResponder()

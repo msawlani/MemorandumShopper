@@ -13,10 +13,11 @@ import FirebaseAuth
 class ChangeEmailVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var Email: UITextField!
-    
+    //Sends you back to settings
     @IBAction func Back(_ sender: Any) {
-        self.performSegue(withIdentifier: "Login", sender: self)
+        self.performSegue(withIdentifier: "Settings", sender: self)
     }
+    //Changes the email to what you entered and logs you out
     @IBAction func ChangeEmail(_ sender: Any) {
         guard let email = Email.text else{return}
         Auth.auth().currentUser?.updateEmail(to: email){ error in
@@ -55,7 +56,7 @@ class ChangeEmailVC: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         
     }
-    
+    //hides keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         Email.resignFirstResponder()
         return (true)

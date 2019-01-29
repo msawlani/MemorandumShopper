@@ -10,13 +10,15 @@ import UIKit
 import Firebase
 
 class SignupViewController: UIViewController, UITextFieldDelegate{
+    
+    //Variables
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var PasswordFieldText: UITextField!
     @IBOutlet weak var reenterpasswordFieldText: UITextField!
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var HideShow2: UIButton!
     
-
+//Creates account for you when the user enters correct information
     @IBAction func signupButton(_ sender: Any) {
         guard let email = emailField.text else {return}
         guard let password = PasswordFieldText.text else {return}
@@ -41,6 +43,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         
     }
     
+    //Shows you how long password has to be
     @IBAction func Hint(_ sender: Any) {
         let alert = UIAlertController(title: "Password Length", message: "Password must be 8 - 16 characters", preferredStyle: .alert)
         
@@ -49,7 +52,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         self.present(alert, animated: true)
     }
     
-    
+    //Shows password
     @IBAction func ShowPassword1(_ sender: Any) {
         if (HideShow.titleLabel?.text == "Show") {
             PasswordFieldText.isSecureTextEntry = false
@@ -61,6 +64,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    //Shows password
     @IBAction func ShowPassword2(_ sender: Any) {
         if (HideShow2.titleLabel?.text == "Show") {
             reenterpasswordFieldText.isSecureTextEntry = false
@@ -72,6 +76,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    //Sends you back to login
     @IBAction func AlreadySignedUp(_ sender: Any) {
         self.performSegue(withIdentifier: "Login", sender: self)
     }
@@ -88,7 +93,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         view.endEditing(true)
         
     }
-    
+    //allows you to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailField.resignFirstResponder()
         PasswordFieldText.resignFirstResponder()

@@ -11,11 +11,12 @@ import UIKit
 import FirebaseAuth
 
 class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
-    
+        @IBOutlet weak var Email: UITextField!
+    //Allows you to go back to Login
     @IBAction func Back(_ sender: Any) {
         self.performSegue(withIdentifier: "Login", sender: self)
     }
-    @IBOutlet weak var Email: UITextField!
+//Sends you reset password link to the email you entered
     @IBAction func ResetPasswordLink(_ sender: Any) {
         guard let email = Email.text else { return }
         Auth.auth().sendPasswordReset(withEmail: email) {error in
@@ -50,7 +51,7 @@ class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         
     }
-    
+    //Hides keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         Email.resignFirstResponder()
         return (true)

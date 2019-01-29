@@ -13,12 +13,13 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate, GIDSignInDelegate{
     
+    //variables
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var GoogleSignin: GIDSignInButton!
-    
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var passwordField: UITextField!
-     
+    
+     //Shows password and changes it to hide then show
     @IBAction func ShowPassword(_ sender: Any) {
         if (HideShow.titleLabel?.text == "Show") {
             passwordField.isSecureTextEntry = false
@@ -31,15 +32,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
 
 
     }
+    
+    //Google login button
     @IBAction func GoogleLogin(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
         
     }
+    //Forgot password button
     @IBAction func ForgotPassword(_ sender: Any) {
         
         self.performSegue(withIdentifier: "ForgotPassword", sender: self)
     }
     
+    //Firebase Login
     @IBAction func loginButton(_ sender: Any) {
 
         guard let email = emailField.text else { return }
@@ -59,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
     
         }
     }
-    
+    //Signup to firebase base
     @IBAction func signupButton(_ sender: Any) {
          self.performSegue(withIdentifier: "SignUp", sender: self)
     }
@@ -95,13 +100,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
         
-        emailField.delegate = self
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         
     }
     
+    //allows for keyboard to hide when you touch anywhere else
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()

@@ -15,13 +15,18 @@ var grocerylist = [String()]
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //Variables
     @IBOutlet weak var Edit: UIButton!
     @IBOutlet weak var List: UITableView!
     var refItem:DatabaseReference!
     var databaseHandled: DatabaseHandle?
+    
+    // calls save function
     @IBAction func Save(_ sender: Any) {
         SaveItems()
     }
+    
+    //Allows you to edit the list and changes the name from done to edit
     @IBAction func EditList(_ sender: Any) {
         List.isEditing = !List.isEditing
         switch List.isEditing{
@@ -32,6 +37,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    //Allows you to share list through any soical media and messages
     @IBAction func ShareList(_ sender: Any) {
         
 
@@ -41,24 +47,30 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
             
     }
+    
+    //Calls load function
     @IBAction func Load(_ sender: Any) {
         LoadItems()
     }
     
+    //Allows for rows to be moved
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    //lets the rows be moved
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let item = grocerylist[sourceIndexPath.row]
         grocerylist.remove(at: sourceIndexPath.row)
         grocerylist.insert(item, at: destinationIndexPath.row)
     }
     
+    //Gets the number of rows from gorcery list
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (grocerylist.count)
     }
     
+    //Puts the items in the list
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
@@ -66,6 +78,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return (cell)
     }
+    
+    //Allows you to delete items
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
     {
         if  editingStyle == UITableViewCell.EditingStyle.delete
@@ -83,6 +97,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        grocerylist.removeAll()
+        
         refItem = Database.database().reference()
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
@@ -90,6 +106,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
 
     }
+    //Saves items to firebase
     func SaveItems(){
 
         
@@ -101,6 +118,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     
+    //loads items from firebase
     func LoadItems(){
         
     let userID = Auth.auth().currentUser!.uid

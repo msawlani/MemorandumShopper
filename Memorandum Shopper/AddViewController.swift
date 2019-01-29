@@ -12,9 +12,10 @@ import UserNotifications
 class AddViewController: UIViewController,UITextFieldDelegate {
 
 
-        
+        //variable
     @IBOutlet weak var Item: UITextField!
     
+    //adds items to list
     @IBAction func Add(_ sender: Any) {
         if  (Item.text != ""){
             grocerylist.append(Item.text!)
@@ -50,6 +51,7 @@ class AddViewController: UIViewController,UITextFieldDelegate {
     
     }
     
+//Hides keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         Item.resignFirstResponder()
         return (true)
