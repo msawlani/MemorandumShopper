@@ -116,6 +116,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         refItem.child(userID).setValue(item)
 
+        let message = "Items have been saved to: " + (Auth.auth().currentUser?.email)!
+        let alert = UIAlertController(title: "Items Saved", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
     //loads items from firebase

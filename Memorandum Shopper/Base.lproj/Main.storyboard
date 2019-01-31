@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-iP-L9u">
-                                <rect key="frame" x="115" y="284" width="180" height="36"/>
+                                <rect key="frame" x="115" y="333" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwm-34-u93">
-                                <rect key="frame" x="115" y="328" width="180" height="36"/>
+                                <rect key="frame" x="115" y="377" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-y6-WCC">
-                                <rect key="frame" x="115" y="372" width="180" height="36"/>
+                                <rect key="frame" x="115" y="421" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,19 +375,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re-enter password...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-OU-cdt">
+                                <rect key="frame" x="117" y="344" width="180" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-iC-kun">
                                 <rect key="frame" x="259" y="313" width="38" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
                                     <action selector="ShowPassword:" destination="dZn-HL-5Mr" eventType="touchUpInside" id="IHv-zl-9ty"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-Yn-2AZ">
-                                <rect key="frame" x="259" y="349" width="38" height="30"/>
-                                <state key="normal" title="Show"/>
-                                <connections>
-                                    <action selector="ShowPassword2:" destination="dZn-HL-5Mr" eventType="touchUpInside" id="h74-Yn-u4o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-nl-JjA">
@@ -426,12 +425,13 @@
                                     <action selector="ChangePassword:" destination="dZn-HL-5Mr" eventType="touchUpInside" id="5dF-4Q-j54"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re-enter password...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-OU-cdt">
-                                <rect key="frame" x="117" y="344" width="180" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-Yn-2AZ">
+                                <rect key="frame" x="259" y="344" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="ShowPassword2:" destination="dZn-HL-5Mr" eventType="touchUpInside" id="h74-Yn-u4o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -440,8 +440,8 @@
                             <constraint firstItem="CLp-OU-cdt" firstAttribute="top" secondItem="fMj-S6-Wlf" secondAttribute="bottom" constant="1" id="HxA-lx-fib"/>
                             <constraint firstItem="U4W-iC-kun" firstAttribute="leading" secondItem="aAr-Yn-2AZ" secondAttribute="leading" id="IV1-D8-uuJ"/>
                             <constraint firstItem="PZe-nl-JjA" firstAttribute="leading" secondItem="fMj-S6-Wlf" secondAttribute="trailing" constant="8" symbolic="YES" id="QUK-Na-JgO"/>
-                            <constraint firstItem="C8v-TL-KRM" firstAttribute="top" secondItem="aAr-Yn-2AZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Vr8-tJ-DPl"/>
-                            <constraint firstItem="aAr-Yn-2AZ" firstAttribute="top" secondItem="fMj-S6-Wlf" secondAttribute="bottom" constant="6" id="bdG-Ov-OfJ"/>
+                            <constraint firstItem="C8v-TL-KRM" firstAttribute="top" secondItem="aAr-Yn-2AZ" secondAttribute="bottom" constant="13" id="Vr8-tJ-DPl"/>
+                            <constraint firstItem="aAr-Yn-2AZ" firstAttribute="top" secondItem="fMj-S6-Wlf" secondAttribute="bottom" constant="1" id="bdG-Ov-OfJ"/>
                             <constraint firstItem="aAr-Yn-2AZ" firstAttribute="trailing" secondItem="C8v-TL-KRM" secondAttribute="trailing" id="cOR-4z-UFK"/>
                             <constraint firstItem="PZe-nl-JjA" firstAttribute="leading" secondItem="aAr-Yn-2AZ" secondAttribute="trailing" constant="8" symbolic="YES" id="crJ-TG-c4r"/>
                             <constraint firstItem="mhK-gX-mNF" firstAttribute="bottom" secondItem="C8v-TL-KRM" secondAttribute="bottom" constant="313" id="cuh-J6-NEy"/>
@@ -813,7 +813,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="f8u-Ka-dpb"/>
-        <segue reference="Xmj-mf-U7a"/>
-        <segue reference="5Ec-qf-On0"/>
+        <segue reference="vbf-31-ikp"/>
+        <segue reference="uFP-wf-r1s"/>
     </inferredMetricsTieBreakers>
 </document>
