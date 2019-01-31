@@ -40,7 +40,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //Allows you to share list through any soical media and messages
     @IBAction func ShareList(_ sender: Any) {
         
-
+        
         let sharelist = UIActivityViewController(activityItems: grocerylist, applicationActivities: nil)
         sharelist.popoverPresentationController?.sourceView = self.view
         self.present(sharelist, animated: true, completion: nil)

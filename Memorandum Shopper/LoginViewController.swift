@@ -15,9 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
     
     //variables
     @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var GoogleSignin: GIDSignInButton!
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var Google: GIDSignInButton!
     
      //Shows password and changes it to hide then show
     @IBAction func ShowPassword(_ sender: Any) {
@@ -99,7 +99,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDele
         GIDSignIn.sharedInstance().delegate = self
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
-        
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

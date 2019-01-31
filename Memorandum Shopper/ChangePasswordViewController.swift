@@ -59,40 +59,34 @@ class ChangePasswordVC: UIViewController, UITextFieldDelegate {
     //changes the password your password to what you entered and logs you out
     @IBAction func ChangePassword(_ sender: Any) {
         guard let password = Password.text else{return}
-        guard let reEnterPassword = reenterPassword.text else{return}
+
         Auth.auth().currentUser?.updatePassword(to: password){ error in
             if let error = error{
                 print(error)
-                let alert = UIAlertController(title: "Failed to Change Password", message: "Must enter Password", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Failed to Change Password", message: "Passwords must match!", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 
                 self.present(alert, animated: true)
             }else{
-                if password == reEnterPassword{
                 let message = "You can now re-login with your new password"
-                    let alert = UIAlertController(title: "Successful Change to Password", message: message, preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in
-                        do{
-                            try Auth.auth().signOut()
-                        }catch let Logouterror{
-                            print(Logouterror)
-                        }
-                        
+                let alert = UIAlertController(title: "Successful Change to Password", message: message, preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in
+                    do{
+                        try Auth.auth().signOut()
                         self.performSegue(withIdentifier: "Login", sender: self)
-                        
-                    }))
+                    }catch let Logouterror{
+                        print(Logouterror)
+                    }
+                    
+                    
+                }))
                 
                 self.present(alert, animated: true)
-                }
-                else{
-                    let alert = UIAlertController(title: "Failed to Change Password", message: "Both passwords must match", preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                }
             }
         }
+     
     }
     override func viewDidLoad() {
         super.viewDidLoad()

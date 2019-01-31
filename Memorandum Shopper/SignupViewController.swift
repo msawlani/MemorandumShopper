@@ -23,23 +23,22 @@ class SignupViewController: UIViewController, UITextFieldDelegate{
         guard let email = emailField.text else {return}
         guard let password = PasswordFieldText.text else {return}
 
-        
-        Auth.auth().createUser(withEmail: email, password: password){
-            user, error in
-            if error == nil && user != nil && self.PasswordFieldText == self.reenterpasswordFieldText && self.PasswordFieldText != nil && self.reenterpasswordFieldText != nil{
+        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+            if error == nil && user != nil && self.PasswordFieldText.text != nil && self.PasswordFieldText.text == self.reenterpasswordFieldText.text{
                 self.performSegue(withIdentifier: "MainMenu", sender: self)
-                print("Signup Successful")
-       
-            }else{
-                let alert = UIAlertController(title: "Failed to Signup", message: "Must enter email and Passwords must match", preferredStyle: .alert)
+                
+            } else {
+                let alert = UIAlertController(title: "Failed to Signup", message: "Must enter email and make sure the passwords match", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 
                 self.present(alert, animated: true)
-                
             }
             
         }
+    
+            
+        
         
     }
     

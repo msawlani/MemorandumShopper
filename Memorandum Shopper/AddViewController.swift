@@ -14,21 +14,15 @@ class AddViewController: UIViewController,UITextFieldDelegate {
 
         //variable
     @IBOutlet weak var Item: UITextField!
+    @IBOutlet weak var ItemAdded: UILabel!
     
     //adds items to list
     @IBAction func Add(_ sender: Any) {
         if  (Item.text != ""){
             grocerylist.append(Item.text!)
-            Item.text = ""
             view.endEditing(true)
-            let content = UNMutableNotificationContent()
-            content.title = "Item Added"
-            content.body = Item.text!
-            content.badge = 1
-            
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-            let request = UNNotificationRequest(identifier: "Timer Done", content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            ItemAdded.text = "Item Added: " + Item.text!;
+            Item.text = ""
         }
         
         
