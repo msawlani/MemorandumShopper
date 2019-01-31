@@ -13,18 +13,21 @@ import GoogleSignIn
 
 class SettingsViewController: UIViewController,UITextFieldDelegate {
     
+    @IBOutlet weak var ChangeEmailAddress: UIButton!
+    @IBOutlet weak var ChangePass: UIButton!
     //Sends you to change password for firebase
     @IBAction func ChangePassword(_ sender: Any) {
-        if GIDSignIn.sharedInstance()?.currentUser == nil{
+
             self.performSegue(withIdentifier: "Password", sender: self)
-        }
+        
    
     }
         //Sends you to change email for firebase
     @IBAction func ChangeEmail(_ sender: Any) {
-        if GIDSignIn.sharedInstance()?.currentUser == nil{
+ 
         self.performSegue(withIdentifier: "Email", sender: self)
-        }
+        
+    
     }
     
     //logs google user and firebase user out
@@ -42,9 +45,19 @@ class SettingsViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
-            
-            
+        if GIDSignIn.sharedInstance()?.currentUser == nil{
+            ChangeEmailAddress.isEnabled = true
+            ChangePass.isEnabled = true
+        }else{
+            ChangeEmailAddress.isEnabled = false
+            ChangePass.isEnabled = false
         }
+        }
+
+    
+  
+
+    
         
         
     }

@@ -247,7 +247,7 @@
                                     <action selector="ChangeEmail:" destination="6Oh-s2-00M" eventType="touchUpInside" id="pX4-Uo-0YA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-y6-WCC">
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-y6-WCC">
                                 <rect key="frame" x="115" y="421" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.40531929100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -286,6 +286,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="first" id="oPn-x9-7c2"/>
                     <connections>
+                        <outlet property="ChangeEmailAddress" destination="Lwm-34-u93" id="EvA-28-3QP"/>
+                        <outlet property="ChangePass" destination="0ti-y6-WCC" id="zH6-2J-Yuo"/>
                         <segue destination="Cqo-ja-nu2" kind="showDetail" identifier="Login" id="0JP-bq-3TJ"/>
                         <segue destination="qac-to-bb1" kind="showDetail" identifier="Email" id="pdg-7h-Eav"/>
                         <segue destination="dZn-HL-5Mr" kind="showDetail" identifier="Password" id="TbP-jt-GA2"/>
@@ -812,8 +814,9 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TbP-jt-GA2"/>
         <segue reference="f8u-Ka-dpb"/>
-        <segue reference="vbf-31-ikp"/>
+        <segue reference="0JP-bq-3TJ"/>
         <segue reference="uFP-wf-r1s"/>
     </inferredMetricsTieBreakers>
 </document>
