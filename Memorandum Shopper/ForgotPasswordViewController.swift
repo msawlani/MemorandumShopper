@@ -34,8 +34,7 @@ class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
 
                 }))
                 
-                self.present(alert, animated: true)
-                
+
             }
             
         }

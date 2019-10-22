@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D95C4E644FD96B1B80273828 /* Pods_Memorandum_Shopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9343E6B560C5AD5AE73BBAC3 /* Pods_Memorandum_Shopper.framework */; };
+		F20BEB3D2276325F00EA0369 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */; };
 		F21A44EF21E520BE00202BD6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */; };
 		F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E9F9121C1DD8C0012DE81 /* ViewControllerTableViewCell.swift */; };
 		F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1A9E21B9749A0059E3E6 /* AppDelegate.swift */; };
 		F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA021B9749A0059E3E6 /* ListViewController.swift */; };
-		F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1AA221B9749A0059E3E6 /* AddViewController.swift */; };
 		F23F1AA621B9749A0059E3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA421B9749A0059E3E6 /* Main.storyboard */; };
 		F23F1AA821B9749A0059E3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA721B9749A0059E3E6 /* Assets.xcassets */; };
 		F23F1AAB21B9749A0059E3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23F1AA921B9749A0059E3E6 /* LaunchScreen.storyboard */; };
@@ -42,12 +42,12 @@
 		0BFB394B5D13A9DEB1D80510 /* Pods-Memorandum Shopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorandum Shopper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper.debug.xcconfig"; sourceTree = "<group>"; };
 		9343E6B560C5AD5AE73BBAC3 /* Pods_Memorandum_Shopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memorandum_Shopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF284BD76F992C428D23CABF /* Pods-Memorandum Shopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorandum Shopper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper.release.xcconfig"; sourceTree = "<group>"; };
+		F20BEB3C2276325F00EA0369 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F22E9F9121C1DD8C0012DE81 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		F23F1A9B21B9749A0059E3E6 /* Memorandum Shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memorandum Shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23F1A9E21B9749A0059E3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F23F1AA021B9749A0059E3E6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		F23F1AA221B9749A0059E3E6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F23F1AA521B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F23F1AA721B9749A0059E3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F23F1AAA21B9749A0059E3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 				F23F1AA021B9749A0059E3E6 /* ListViewController.swift */,
 				F2D40A7321C29FFB0060D66A /* LoginViewController.swift */,
 				F2D40A7521C2AC130060D66A /* SignupViewController.swift */,
-				F23F1AA221B9749A0059E3E6 /* AddViewController.swift */,
 				F23F1AA421B9749A0059E3E6 /* Main.storyboard */,
 				F22E9F9121C1DD8C0012DE81 /* ViewControllerTableViewCell.swift */,
 				F23F1AA721B9749A0059E3E6 /* Assets.xcassets */,
@@ -128,6 +127,7 @@
 				F28CB80A21FA105500712516 /* ForgotPasswordViewController.swift */,
 				F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */,
 				F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */,
+				F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -213,9 +213,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -223,9 +225,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -287,9 +291,9 @@
 			files = (
 				F28CB80B21FA105500712516 /* ForgotPasswordViewController.swift in Sources */,
 				F2D40A7621C2AC130060D66A /* SignupViewController.swift in Sources */,
+				F20BEB3D2276325F00EA0369 /* CoreData.xcdatamodeld in Sources */,
 				F240F44B21FA1F3D0054BCDE /* ChangeEmailViewController.swift in Sources */,
 				F240F44D21FA1F530054BCDE /* ChangePasswordViewController.swift in Sources */,
-				F23F1AA321B9749A0059E3E6 /* AddViewController.swift in Sources */,
 				F21A44EF21E520BE00202BD6 /* SettingsViewController.swift in Sources */,
 				F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */,
 				F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */,
@@ -496,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F20BEB3C2276325F00EA0369 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = F20BEB3C2276325F00EA0369 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F23F1A9321B9749A0059E3E6 /* Project object */;
 }

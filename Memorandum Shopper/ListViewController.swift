@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 import UserNotifications
+import CoreData
 
-var grocerylist = [String()]
+
+var grocerylist: [String] = []
 
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -20,6 +22,28 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var List: UITableView!
     var refItem:DatabaseReference!
     var databaseHandled: DatabaseHandle?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //grocerylist.removeAll()
+        
+        List.dataSource = self
+        List.delegate = self
+        List.reloadData()
+        
+        refItem = Database.database().reference()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+            
+        })
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "item")
+        
+        request.returnsObjectsAsFaults = false
+    }
+    
     
     // calls save function
     @IBAction func Save(_ sender: Any) {
@@ -52,6 +76,24 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func Load(_ sender: Any) {
         LoadItems()
     }
+    @IBAction func Add(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Add Items", message: "Please fill in to add something to the list", preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: "Add", style: .default) { [unowned self] action in
+        
+            guard let textField = alertController.textFields?.first, let item = textField.text else {return}
+            
+            grocerylist.append(item)
+            self.List.reloadData()
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addTextField(configurationHandler: nil)
+        alertController.addAction(alertAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     //Allows for rows to be moved
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -73,10 +115,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //Puts the items in the list
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = grocerylist[indexPath.row]
+        let cell = List.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ViewControllerTableViewCell
+        let items = grocerylist[indexPath.row]
+        cell!.item.text = items
         
-        return (cell)
+        return (cell!)
     }
     
     //Allows you to delete items
@@ -89,23 +132,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         List.reloadData()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        grocerylist.removeAll()
-        
-        refItem = Database.database().reference()
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
-            
-        })
-
-    }
+    
     //Saves items to firebase
     func SaveItems(){
 
