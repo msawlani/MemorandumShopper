@@ -13,6 +13,7 @@ import CoreData
 
 
 var grocerylist: [String] = []
+var refresher: UIRefreshControl!
 
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -32,6 +33,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         List.dataSource = self
         List.delegate = self
         List.reloadData()
+        Refresher()
         
         refItem = Database.database().reference()
         
@@ -158,7 +160,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     //loads items from firebase
-    func LoadItems(){
+    @objc func LoadItems(){
         
     let userID = Auth.auth().currentUser!.uid
         databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
@@ -168,11 +170,21 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 grocerylist.append(actualItem!)
                 self.List.reloadData()
+
                 
                 
 
             }
         })
+        
+        refresher.endRefreshing()
+    }
+    
+    func Refresher(){
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.addTarget(self, action: #selector(LoadItems), for: .valueChanged)
+        List.addSubview(refresher)
     }
 
 }
