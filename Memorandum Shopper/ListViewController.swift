@@ -12,7 +12,7 @@ import UserNotifications
 import CoreData
 
 
-var grocerylist: [String] = []
+var grocerylist: [Item] = []
 var refresher: UIRefreshControl!
 
 
@@ -84,9 +84,10 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let alertAction = UIAlertAction(title: "Add", style: .default) { [unowned self] action in
         
-            guard let textField = alertController.textFields?.first, let item = textField.text else {return}
+            guard let nameTextField = alertController.textFields?.first, let name = nameTextField.text else {return}
+            guard let asileTextField = alertController.textFields?.first, let asile = asileTextField.text else {return}
             
-            grocerylist.append(item)
+            grocerylist.append(name)
             self.List.reloadData()
             
         }

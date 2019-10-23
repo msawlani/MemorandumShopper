@@ -19,6 +19,7 @@
 		F240F44B21FA1F3D0054BCDE /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */; };
 		F240F44D21FA1F530054BCDE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */; };
 		F250D83F21F3CF3F00618A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F250D83E21F3CF3F00618A67 /* CoreLocation.framework */; };
+		F25ABC4F2360D80F004B0935 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25ABC4E2360D80F004B0935 /* Classes.swift */; };
 		F26A387521E4F16E001C02F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */; };
 		F28CB80B21FA105500712516 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CB80A21FA105500712516 /* ForgotPasswordViewController.swift */; };
 		F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D40A7321C29FFB0060D66A /* LoginViewController.swift */; };
@@ -55,6 +56,7 @@
 		F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		F250D83E21F3CF3F00618A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F25ABC4E2360D80F004B0935 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		F26A387421E4F16E001C02F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F28CB80A21FA105500712516 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F2D40A7321C29FFB0060D66A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				F240F44A21FA1F3D0054BCDE /* ChangeEmailViewController.swift */,
 				F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */,
 				F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */,
+				F25ABC4E2360D80F004B0935 /* Classes.swift */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				F240F44D21FA1F530054BCDE /* ChangePasswordViewController.swift in Sources */,
 				F21A44EF21E520BE00202BD6 /* SettingsViewController.swift in Sources */,
 				F23F1A9F21B9749A0059E3E6 /* AppDelegate.swift in Sources */,
+				F25ABC4F2360D80F004B0935 /* Classes.swift in Sources */,
 				F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */,
 				F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */,
 				F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */,
