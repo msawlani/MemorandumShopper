@@ -10,7 +10,8 @@ import UIKit
 
 class ViewControllerTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var item: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var asile: UILabel!
     
 
     

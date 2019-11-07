@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D95C4E644FD96B1B80273828 /* Pods_Memorandum_Shopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9343E6B560C5AD5AE73BBAC3 /* Pods_Memorandum_Shopper.framework */; };
+		F2083EA62364B0D100F25E4E /* AddPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2083EA52364B0D100F25E4E /* AddPopUPViewController.swift */; };
 		F20BEB3D2276325F00EA0369 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */; };
 		F21A44EF21E520BE00202BD6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */; };
 		F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E9F9121C1DD8C0012DE81 /* ViewControllerTableViewCell.swift */; };
@@ -43,6 +44,7 @@
 		0BFB394B5D13A9DEB1D80510 /* Pods-Memorandum Shopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorandum Shopper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper.debug.xcconfig"; sourceTree = "<group>"; };
 		9343E6B560C5AD5AE73BBAC3 /* Pods_Memorandum_Shopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memorandum_Shopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF284BD76F992C428D23CABF /* Pods-Memorandum Shopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorandum Shopper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memorandum Shopper/Pods-Memorandum Shopper.release.xcconfig"; sourceTree = "<group>"; };
+		F2083EA52364B0D100F25E4E /* AddPopUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPopUPViewController.swift; sourceTree = "<group>"; };
 		F20BEB3C2276325F00EA0369 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		F21A44EE21E520BE00202BD6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F22E9F9121C1DD8C0012DE81 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				F240F44C21FA1F530054BCDE /* ChangePasswordViewController.swift */,
 				F20BEB3B2276325F00EA0369 /* CoreData.xcdatamodeld */,
 				F25ABC4E2360D80F004B0935 /* Classes.swift */,
+				F2083EA52364B0D100F25E4E /* AddPopUPViewController.swift */,
 			);
 			path = "Memorandum Shopper";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				TargetAttributes = {
 					F23F1A9A21B9749A0059E3E6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -303,6 +307,7 @@
 				F22E9F9221C1DD8C0012DE81 /* ViewControllerTableViewCell.swift in Sources */,
 				F2D40A7421C29FFB0060D66A /* LoginViewController.swift in Sources */,
 				F23F1AA121B9749A0059E3E6 /* ListViewController.swift in Sources */,
+				F2083EA62364B0D100F25E4E /* AddPopUPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -477,7 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "michael.Memorandum-Shopper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

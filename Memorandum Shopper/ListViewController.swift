@@ -12,10 +12,11 @@ import UserNotifications
 import CoreData
 
 
-var grocerylist: [Item] = []
 var refresher: UIRefreshControl!
 
 
+
+@available(iOS 13.0, *)
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Variables
@@ -23,6 +24,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var List: UITableView!
     var refItem:DatabaseReference!
     var databaseHandled: DatabaseHandle?
+    var grocerylist: [Item] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,23 +83,20 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     @IBAction func Add(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Add Items", message: "Please fill in to add something to the list", preferredStyle: .alert)
+        let main = UIStoryboard(name: "Main", bundle: nil)
         
-        let alertAction = UIAlertAction(title: "Add", style: .default) { [unowned self] action in
-        
-            guard let nameTextField = alertController.textFields?.first, let name = nameTextField.text else {return}
-            guard let asileTextField = alertController.textFields?.first, let asile = asileTextField.text else {return}
-            
-            grocerylist.append(name)
-            self.List.reloadData()
-            
+        guard let VC: UIViewController = main.instantiateViewController(identifier: "AddPopUpID") as? AddPopUPViewController else {
+         return
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        alertController.addTextField(configurationHandler: nil)
-        alertController.addAction(alertAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
+        
+        self.addChild(VC)
+        self.view.addSubview(VC.view)
+        VC.didMove(toParent: self)
+        
+
     }
+    
+    
     
     //Allows for rows to be moved
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -120,7 +120,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = List.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ViewControllerTableViewCell
         let items = grocerylist[indexPath.row]
-        cell!.item.text = items
+        cell!.name.text = items.name
+        cell!.asile.text = items.asile
         
         return (cell!)
     }
@@ -160,16 +161,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.present(alert, animated: true)
     }
     
+   
+    
     //loads items from firebase
     @objc func LoadItems(){
         
     let userID = Auth.auth().currentUser!.uid
         databaseHandled = refItem?.child(userID).observe(.childAdded, with: {(snapshot) in
-            let item = snapshot.value as? String
+            let item = snapshot.value as? Item
             let actualItem = item
-            if actualItem != nil && !grocerylist.contains(item!){
+            if actualItem != nil{
                 
-                grocerylist.append(actualItem!)
+                self.grocerylist.append(actualItem!)
                 self.List.reloadData()
 
                 
