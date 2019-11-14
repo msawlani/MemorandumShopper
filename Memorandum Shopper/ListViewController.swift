@@ -49,6 +49,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         request.returnsObjectsAsFaults = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        List.reloadData()
+        List.dataSource = self
+        List.delegate = self
+    }
+
+
+    
     
     // calls save function
     @IBAction func Save(_ sender: Any) {
@@ -88,11 +96,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         guard let VC: UIViewController = main.instantiateViewController(identifier: "AddPopUpID") as? AddPopUPViewController else {
          return
         }
-        
-        self.addChild(VC)
-        self.view.addSubview(VC.view)
-        VC.didMove(toParent: self)
-        
+        navigationController?.pushViewController(VC, animated: true)
 
     }
     
@@ -112,13 +116,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //Gets the number of rows from gorcery list
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (grocerylist.count)
+        return grocerylist.count
     }
     
     //Puts the items in the list
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = List.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ViewControllerTableViewCell
+        let cell = List.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ViewControllerTableViewCell
         let items = grocerylist[indexPath.row]
         cell!.name.text = items.name
         cell!.asile.text = items.asile
@@ -138,9 +142,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        List.reloadData()
-    }
+    
 
     
     //Saves items to firebase

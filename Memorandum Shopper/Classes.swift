@@ -9,7 +9,7 @@
 import Foundation
 
 class Item{
-    var name: String = ""
+    var name: String
     var asile: String
     
     init(name: String = "", asile: String = "") {
