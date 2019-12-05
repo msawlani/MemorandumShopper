@@ -35,7 +35,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         List.dataSource = self
         List.delegate = self
-        List.reloadData()
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            DispatchQueue.main.async {
+                self.List.reloadData()
+            }
+        }
         Refresher()
         
         refItem = Database.database().reference()
@@ -47,6 +53,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "item")
         
         request.returnsObjectsAsFaults = false
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,8 +76,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch List.isEditing{
         case true:
             Edit.setTitle("Done", for: .normal)
+            self.tabBarController?.tabBar.isHidden = true
+         
         case false:
             Edit.setTitle("Edit", for: .normal)
+            self.tabBarController?.tabBar.isHidden = false
         }
     }
     
